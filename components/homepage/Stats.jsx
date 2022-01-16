@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Box, SimpleGrid, Text, Flex, Center } from "@chakra-ui/react";
 import React from "react";
 import WrapContent from "../general/WrapContent";

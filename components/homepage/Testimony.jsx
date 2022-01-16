@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Avatar, Box, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 
 export default function Testimony() {
