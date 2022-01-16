@@ -54,6 +54,7 @@ export default function Footer() {
           <Stack align={"flex-start"} spacing="4">
             <ListHeader>Contact Us</ListHeader>
             <Link
+              passHref
               href={
                 "https://www.facebook.com/James-Udoekong-Education-Trust-Fund-117624183436700/"
               }
@@ -63,13 +64,13 @@ export default function Footer() {
                 <Text>James Udoekong Education Trust Fund</Text>
               </HStack>
             </Link>
-            <Link href={"mailto:info@jamesudoekongtrustfund.org"}>
+            <Link passHref href={"mailto:info@jamesudoekongtrustfund.org"}>
               <HStack spacing="4" cursor={"pointer"}>
                 <Icon as={FaEnvelopeOpen} fontSize="30px" />
                 <Text>info@jamesudoekongtrustfund.org</Text>
               </HStack>
             </Link>
-            <Link href={"tel:+2348034023476"}>
+            <Link passHref href={"tel:+2348034023476"}>
               <HStack spacing="4" cursor={"pointer"}>
                 <Icon as={FaPhoneAlt} fontSize="30px" />
                 <Text>+234 803 402 3476</Text>

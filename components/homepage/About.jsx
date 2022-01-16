@@ -51,7 +51,7 @@ export default function About() {
               with efficient communication skills.
             </Text>
             <Center>
-              <Link href={"/founder"}>
+              <Link passHref href={"/founder"}>
                 <Button
                   display={"block"}
                   fontWeight={"bold"}

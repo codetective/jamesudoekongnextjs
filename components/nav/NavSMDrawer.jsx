@@ -61,7 +61,7 @@ function NavSMDrawer(props) {
               <a style={{ display: "block", width: "100%" }}>
                 <Flex width="100%" textAlign="center" justifyContent="center">
                   <Box overflow="hidden">
-                    <Image src={"/images/logo.png"} w="79%" />
+                    <Image alt="logo" src={"/images/logo.png"} w="79%" />
                   </Box>
                 </Flex>
               </a>
