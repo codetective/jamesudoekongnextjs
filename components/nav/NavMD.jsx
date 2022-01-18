@@ -38,10 +38,10 @@ function NavMD(props) {
         <NavLink href="/News" style={navStyle} linkClass="link-md">
           <Text className="afont">News</Text>
         </NavLink>
-
+        {/* 
         <NavLink href="/contact" style={navStyle} linkClass="link-md">
           <Text className="afont">Contact</Text>
-        </NavLink>
+        </NavLink> */}
       </Flex>
     </>
   );

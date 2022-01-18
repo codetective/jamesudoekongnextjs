@@ -49,9 +49,9 @@ function NavSMDrawer(props) {
               <Text className="afont">News</Text>
             </NavLink>
 
-            <NavLink href="/contact" style={navStyle} linkClass="link-md">
+            {/* <NavLink href="/contact" style={navStyle} linkClass="link-md">
               <Text className="afont">Contact</Text>
-            </NavLink>
+            </NavLink> */}
           </DrawerBody>
           <DrawerFooter>
             <Link
