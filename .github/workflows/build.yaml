@@ -32,7 +32,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: new.jamesudoekongtrustfund.org
+        ftp-server: ftp.new.jamesudoekongtrustfund.org
         ftp-username: codetective_jamesudoekongtrustfund.org@jamesudoekongtrustfund.org
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: out/
