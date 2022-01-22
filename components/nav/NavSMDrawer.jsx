@@ -49,9 +49,9 @@ function NavSMDrawer(props) {
               <Text className="afont">News</Text>
             </NavLink>
 
-            {/* <NavLink href="/contact" style={navStyle} linkClass="link-md">
-              <Text className="afont">Contact</Text>
-            </NavLink> */}
+            <NavLink href="/gallery" style={navStyle} linkClass="link-md">
+              <Text className="afont">Gallery</Text>
+            </NavLink>
           </DrawerBody>
           <DrawerFooter>
             <Link
@@ -61,7 +61,7 @@ function NavSMDrawer(props) {
               <a style={{ display: "block", width: "100%" }}>
                 <Flex width="100%" textAlign="center" justifyContent="center">
                   <Box overflow="hidden">
-                    <Image alt="logo" src={"/images/logo.png"} w="79%" />
+                    <Image alt="logo" src={"/img/logo.png"} w="50%" />
                   </Box>
                 </Flex>
               </a>
