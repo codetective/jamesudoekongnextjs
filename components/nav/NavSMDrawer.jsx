@@ -42,10 +42,10 @@ function NavSMDrawer(props) {
             <NavLink href="/focus" style={navStyle} linkClass="link-md">
               <Text className="afont">Focus</Text>
             </NavLink>
-            <NavLink href="/benficiaries" style={navStyle} linkClass="link-md">
+            <NavLink href="/beneficiaries" style={navStyle} linkClass="link-md">
               <Text className="afont">Beneficiaries</Text>
             </NavLink>
-            <NavLink href="/News" style={navStyle} linkClass="link-md">
+            <NavLink href="/news" style={navStyle} linkClass="link-md">
               <Text className="afont">News</Text>
             </NavLink>
 

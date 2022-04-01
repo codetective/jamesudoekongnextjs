@@ -15,7 +15,7 @@ function NavSM(props) {
 
       <Link href="/">
         <a style={{ display: "flex" }}>
-          <Box overflow="hidden">
+          <Box as="span" overflow="hidden">
             <Image src={"/img/logo.png"} w="80px" h="100%" alt="logo" />{" "}
           </Box>
         </a>

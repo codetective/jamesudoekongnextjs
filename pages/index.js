@@ -7,6 +7,7 @@ import IntroSection from "../components/homepage/IntroSection";
 import MissionVision from "../components/homepage/MissionVision";
 import Stats from "../components/homepage/Stats";
 import Testimony from "../components/homepage/Testimony";
+import SpeechBanner from "../components/homepage/SpeechBanner";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <Focus />
       <MissionVision />
       <Stats />
+      {/* <SpeechBanner /> */}
       <HowToHelp />
     </>
   );

@@ -24,7 +24,7 @@ export default function Testimony() {
       <Box textAlign={"center"}>
         <Avatar src={"/img/p2.jpg"} alt={"Anonymous Beneficiary"} mb={2} />
 
-        <Text fontWeight={600}>(Anonymous)</Text>
+        <Text fontWeight={600}>Eno</Text>
         <Text fontSize={"sm"} color={useColorModeValue("gray.400", "gray.400")}>
           Beneficiary
         </Text>

@@ -10,7 +10,7 @@ const SponsorButton = (
     size={"small"}
     as="a"
     aria-label="Sponsor our cause"
-    href={""}
+    href={"/donate"}
     rel="noopener noreferrer"
     bg="gray.50"
     borderWidth="1px"
@@ -53,7 +53,7 @@ function TopContactBar() {
               alignItems={"center"}
               fontSize={["small", "small", "md"]}
             >
-              <Box pr="2">
+              <Box as="span" pr="2">
                 <FaEnvelope />
               </Box>
               <a href="mailto:info@jamesudoekongtrustfund.org">
@@ -67,7 +67,7 @@ function TopContactBar() {
               alignItems={"center"}
               fontSize={["small", "small", "md"]}
             >
-              <Box pr="2">
+              <Box as="span" pr="2">
                 <FaPhoneAlt />
               </Box>
               <a href="tel:+2348034023476"> +234 803 402 3476</a>

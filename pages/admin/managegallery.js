@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import {
   Box,
   Text,
@@ -16,7 +16,7 @@ import { useState } from "react";
 import { FcEmptyFilter } from "react-icons/fc";
 import axios from "axios";
 
-function Gallery() {
+function ManageGallery() {
   const toast = useToast();
   const [isOpen, setOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -44,6 +44,46 @@ function Gallery() {
         setError(true);
       });
   };
+  const deleteImages = useCallback(
+    async (id) => {
+      try {
+        const response = await axios.post("/static/deletegallery.php", {
+          id: id,
+        });
+        if (response.data.success) {
+          toast({
+            position: "bottom-left",
+            isClosable: true,
+            status: "success",
+            title: "Image Deleted",
+            description: "Image has been deleted successfully.",
+          });
+          setCampaignImages((prev) => prev.filter((images) => images.id != id));
+        } else {
+          setLoading(false);
+          toast({
+            position: "bottom-left",
+            isClosable: true,
+            status: "error",
+            title: response.data.error,
+            description:
+              "This is probably a problem with the network, please try again.",
+          });
+        }
+      } catch (error) {
+        setLoading(false);
+        toast({
+          position: "bottom-left",
+          isClosable: true,
+          status: "error",
+          title: error.message,
+          description:
+            "This is probably a problem with the network, please try again.",
+        });
+      }
+    },
+    [toast]
+  );
 
   useEffect(() => {
     fetchImgs();
@@ -54,18 +94,22 @@ function Gallery() {
     <>
       <Box margin="auto" overflow="hidden" py="80px" bgColor="gray.50">
         <Container maxW="container.xxl" px={8}>
-          <Text
-            as="h1"
-            textTransform={"capitalize"}
-            fontWeight={"bolder"}
-            className="mfont"
-            color="#ee5c27"
-            fontSize={["4xl", "4xl", "5xl", "5xl"]}
-            textAlign={"center"}
-            pb="5"
-          >
-            Gallery
-          </Text>
+          <Box py="40px">
+            <Text
+              as="h2"
+              textTransform={"capitalize"}
+              fontWeight={"light"}
+              className="mfont"
+              color="#ee5c27"
+              fontSize={["4xl", "4xl", "5xl", "5xl"]}
+              textAlign={"center"}
+            >
+              Delete Images
+            </Text>
+            <Box fontStyle={"oblique"} className="mfont" textAlign="center">
+              on this screen you can delete images from the database
+            </Box>
+          </Box>
 
           {campaignImages.length == 0 && !loading && !error && (
             <Center flexDir={"column"}>
@@ -115,20 +159,18 @@ function Gallery() {
             </Center>
           )}
           <Box className="row">
-            <SimpleGrid columns={[1, 1, 2, 3]} spacing="8" className="column">
+            <SimpleGrid columns={[1, 2, 3, 4]} spacing="8" className="column">
               {campaignImages.map((image, index) => {
                 return (
-                  <Box
-                    width="100%"
-                    cursor={"pointer"}
-                    key={index}
-                    onClick={() => {
-                      setOpen(true);
-                      setPhotoIndex(index);
-                    }}
-                    shadow="sm"
-                  >
-                    <Box className="item" pos="relative">
+                  <Box width="100%" cursor={"pointer"} key={index} shadow="sm">
+                    <Box
+                      className="item"
+                      pos="relative"
+                      onClick={() => {
+                        setOpen(true);
+                        setPhotoIndex(index);
+                      }}
+                    >
                       <Box className="img-bx">
                         <Image src={image.image} alt={image.caption} w="full" />
                       </Box>
@@ -149,6 +191,17 @@ function Gallery() {
                         {image.caption}
                       </Box>
                     </Box>
+                    <Button
+                      variant="outline"
+                      color={"red"}
+                      colorScheme={"red"}
+                      size="md"
+                      w="full"
+                      mt="5"
+                      onClick={() => deleteImages(image.id)}
+                    >
+                      Delete
+                    </Button>
                   </Box>
                 );
               })}
@@ -197,4 +250,4 @@ function Gallery() {
   );
 }
 
-export default Gallery;
+export default ManageGallery;

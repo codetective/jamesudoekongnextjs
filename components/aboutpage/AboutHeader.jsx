@@ -2,7 +2,7 @@ import { Box, Stack, Text, Flex } from "@chakra-ui/react";
 import React from "react";
 import WrapContent from "../general/WrapContent";
 
-export default function AboutHeader() {
+export default function AboutHeader({ title }) {
   return (
     <Box
       h="300px"
@@ -35,7 +35,7 @@ export default function AboutHeader() {
             as="h1"
             py="5"
           >
-            About Us
+            {title || "About Us"}
           </Text>
         </Stack>
       </WrapContent>

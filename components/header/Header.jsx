@@ -39,7 +39,7 @@ export default function Header() {
               alignItems="center"
               as="a"
               aria-label="Sponsor our cause"
-              href={""}
+              href={"/donate"}
               rel="noopener noreferrer"
               bg="#ee5c27"
               color="white"

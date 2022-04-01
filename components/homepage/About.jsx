@@ -65,7 +65,7 @@ export default function About() {
                     boxShadow: "none",
                   }}
                   _hover={{
-                    color: "white",
+                    color: "orange",
                   }}
                   textAlign={"center"}
                   color="#ee5c27"

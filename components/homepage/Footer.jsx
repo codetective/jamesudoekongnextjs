@@ -45,10 +45,11 @@ export default function Footer() {
 
           <Stack align={"flex-start"} spacing={"4"}>
             <ListHeader>Get Involved</ListHeader>
-            <Link href={"#"}>Donate</Link>
-            <Link href={"#"}>News</Link>
-            <Link href={"#"}>Gallery</Link>
-            <Link href={"#"}>Board of Trustees</Link>
+            <Link href={"/donate"}>Donate</Link>
+            <Link href={"/news"}>News</Link>
+            <Link href={"/gallery"}>Gallery</Link>
+            <Link href={"/about"}>Board of Trustees</Link>
+            <Link href={"/admin"}>Login</Link>
           </Stack>
 
           <Stack align={"flex-start"} spacing="4">
